@@ -3,14 +3,14 @@
 
 rm(list=ls())
 library(shiny)
-data <- read.csv("C:\\Users\\Andy's Home PC\\Documents\\R_Projects\\divorce_rates\\raw data\\divorces-under-the-womens-charter-by-ethnic-group-of-couple-and-duration-of-marriage.csv", header=TRUE, na.strings=c(""))
+data <- read.csv("divorces-under-the-womens-charter-by-ethnic-group-of-couple-and-duration-of-marriage.csv", header=TRUE, na.strings=c(""))
 data <- transform(data, year = as.Date(as.character(year), "%Y"))
 
 varList_L1 <- c("Total", "Chinese", "Indians", "Others", "Inter-ethnic")
 varList_L2 <- c("Under 5 Years", "5-9 Years", "10-14 Years", "15-19 Years", "20-24 Years", "25-29 Years", "30 Years & Over")
 
 
-# ========================= Test ================================
+# ========================= the ui and server codes ================================
 library(shiny)
 
 ui<- shinyUI(fluidPage(
